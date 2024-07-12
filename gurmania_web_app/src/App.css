@@ -1,0 +1,608 @@
+.App {
+  background-color: #FFFFFF;
+  color: black;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Убираем горизонтальный скролл */
+}
+
+header{
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+.logo
+{
+  width: 500px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: -20px 0px;
+}
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.login-btn {
+  background-color: #66bb6a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.75s ease;
+}
+
+.login-btn:hover {
+  background-color: #3c7b3c;
+}
+
+
+/*КАРУСЕЛЬ*/
+
+/* Стиль по умолчанию */
+.carousel {
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Адаптация при масштабе 175% (приблизительно 1.75x) и выше */
+@media (min-resolution: 168dpi) {
+  .carousel {
+    max-height: 80vh;
+  }
+  .carousel img {
+    min-height: 400px;
+  }
+}
+
+/* Адаптация при масштабе 200% (приблизительно 2x) и выше */
+@media (min-resolution: 192dpi) {
+  .carousel {
+    max-height: 70vh;
+  }
+  .carousel img {
+    min-height: 300px;
+  }
+}
+
+/* Адаптация при масштабе 250% (приблизительно 2.5x) и выше */
+@media (min-resolution: 240dpi) {
+  .carousel {
+    max-height: 60vh;
+  }
+  .carousel img {
+    min-height: 200px;
+  }
+}
+
+/*КОНТЕНТ*/
+
+.content{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 200px 0 200px;
+}
+.content h1{
+  padding-bottom: 20px;
+}
+.content p{
+  font-size: 30px;
+}
+
+
+/*ФОРМЫ*/
+
+.content-form{
+  background-color: white;
+  border-radius: 15px;
+
+  margin: 0 300px 50px 300px;
+}
+
+.forma {
+  margin: 0 0 20px 0;
+  display:inline-block;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  overflow:hidden;
+}
+.auth_style{
+  font-size:25px;
+  border-radius: 10px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+.login-container button{
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  width: 100%;
+  padding: 0.75rem;
+}
+.login-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-form h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.login-form p {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.login-form a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+/*ПОДВАЛ*/
+.footer{
+  background-color: #65b442; /* Цвет фона */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer a{
+  color: white;
+}
+.mail-to{
+  color: white;
+  min-width: 500px;
+}
+
+/*КАРТОЧКИ С РЕЦЕПТАМИ*/
+
+.recipe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    max-width: 300px;
+    width: 100%;
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px);
+}
+
+.recipe-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.recipe-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 16px;
+    text-align: center;
+}
+
+.recipe-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-info {
+    padding: 16px;
+    color: #555;
+}
+
+.recipe-info p {
+    margin: 8px 0;
+}
+
+.recipe-info strong {
+    color: #333;
+}
+
+/*ДЕТАЛИ РЕЦЕПТА*/
+
+.recipe-details-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-title {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.recipe-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.recipe-meta > div {
+  margin-bottom: 10px;
+}
+
+.recipe-detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.menu2 {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.menu2 p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.menu2 ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu2 li {
+  margin-bottom: 10px;
+}
+
+.menu2 a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.menu2 a:hover {
+  color: #0056b3;
+}
+
+.recipe-description,
+.recipe-ingredients,
+.recipe-instructions,
+.recipe-comments {
+  margin-bottom: 20px;
+}
+
+.recipe-description p,
+.recipe-ingredients ul,
+.recipe-instructions ol {
+  margin: 0;
+  padding-left: 20px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.recipe-ingredients ul {
+  list-style: disc;
+}
+
+.recipe-instructions ol {
+  list-style: decimal;
+}
+
+.recipe-comments {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.recipe-comments h2 {
+  margin-top: 0;
+}
+
+/*ПРИВЕТСТВИЕ*/
+
+.username {
+  font-size: 1.2rem;
+  color: #007bff;
+  font-weight: bold;
+  background-color: #f1f1f1;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+  margin-right: 20px;
+}
+
+.username:hover {
+  background-color: #e2e6ea;
+  color: #0056b3;
+}
+
+/*ФОРМА ДОБАВЛЕНИЯ РЕЦЕПТА*/
+
+.recipe-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin: 20px 0 20px 0;
+}
+
+input[type="text"], input[type="number"], textarea, input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/*КОММЕНТАРИИ*/
+
+/* Основной контейнер */
+.comments-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Текстовое поле для добавления комментария */
+.comments-section textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  resize: vertical;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+/* Кнопка для отправки комментария */
+.comments-section .login-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+}
+
+.comments-section .login-btn:hover {
+  background-color: #45a049;
+}
+
+/* Текст уведомления для незарегистрированных пользователей */
+.comments-section p {
+  font-size: 14px;
+  color: #777;
+  text-align: left;
+}
+
+/* Список комментариев */
+.comments-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Элемент списка комментариев */
+.comments-section li {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.comments-section li p {
+  margin: 0;
+  margin-bottom: 8px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Дата комментария */
+.comments-section .commentDate {
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+}
+
+/*НОВОСТИ*/
+
+/* Стили для списка новостей */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.news-link{
+  text-decoration: none;
+  color: inherit;
+}
+/* Стили для отдельного элемента новости */
+.news-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.news-item:hover {
+  transform: translateY(-10px);
+}
+
+.news-item h2 {
+  font-size: 1.5rem;
+  margin: 20px 0 10px;
+
+}
+
+.news-item p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 20px 20px;
+}
+
+.news-item em {
+  font-size: 0.9rem;
+  color: #777;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.news-item .news-content {
+  padding: 20px;
+}
+
+/*ДЕТАЛИ НОВОСТИ*/
+
+.news-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.news-detail p {
+  line-height: 1.6;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.news-detail em {
+  display: block;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #888;
+  text-align: right;
+}
+
+/*ПРОЧЕЕ*/
+
+.not-found-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
